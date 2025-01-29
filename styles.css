@@ -13,8 +13,29 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 300px;
+    width: 90%;
+    max-width: 600px; /* Ограничиваем максимальную ширину */
     text-align: center; /* Центрирование текста внутри контейнера */
+    position: relative;
+    overflow: hidden; /* Скрытие переполнения для эффекта крови */
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.4) 10%, transparent 10%);
+    transform: rotate(30deg);
+    animation: bloodFlow 5s infinite linear;
+    z-index: -1;
+}
+
+@keyframes bloodFlow {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
 }
 
 h1 {
@@ -45,34 +66,43 @@ button {
 .game-selection {
     display: flex;
     gap: 20px;
-    justify-content: center; /* Центрирование блока с карточками игр */
+    justify-content: space-around; /* Центрирование блока с карточками игр */
+    flex-wrap: wrap; /* Позволяет карточкам переноситься на новую строку при необходимости */
 }
 
 .game-card {
     text-align: center;
     text-decoration: none;
     color: white;
+    flex: 1 1 calc(33.333% - 40px); /* Каждая карточка занимает треть ширины контейнера минус отступы */
+    max-width: 200px; /* Максимальная ширина карточки */
+    transition: transform 0.3s ease-in-out;
 }
 
 .game-card img {
-    width: 150px;
+    width: 100%;
     height: auto;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.game-card:hover {
+    transform: scale(1.05);
 }
 
 /* Уникальные фоны для каждой игры */
 body.dota2 {
-    background: url('https://k1xmusic.github.io/dota-schedule/images/dota2-background.jpg') no-repeat center center fixed;
+    background: url('https://k1xmusic.github.io/dota-schedule//images/dota2-background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 body.readyornot {
-    background: url('https://k1xmusic.github.io/dota-schedule/images/readyornot-background.jpg') no-repeat center center fixed;
+    background: url('https://k1xmusic.github.io/dota-schedule//images/readyornot-background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 body.lethalcompany {
-    background: url('https://k1xmusic.github.io/dota-schedule/images/lethalcompany-background.jpg') no-repeat center center fixed;
+    background: url('https://k1xmusic.github.io/dota-schedule//images/lethalcompany-background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
