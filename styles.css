@@ -14,10 +14,10 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 300px;
+    text-align: center; /* Центрирование текста внутри контейнера */
 }
 
 h1 {
-    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -45,6 +45,7 @@ button {
 .game-selection {
     display: flex;
     gap: 20px;
+    justify-content: center; /* Центрирование блока с карточками игр */
 }
 
 .game-card {
