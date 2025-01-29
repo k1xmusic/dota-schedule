@@ -3,42 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Запись на игры</title>
+    <title>Выбор игры</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Запись на игры</h1>
-        <form action="https://formspree.io/f/xkgorljr"
-            method="POST"
-            >
-            <label for="name">Никнейм Steam:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="game">Игра:</label>
-            <select id="game" name="game" required>
-                <option value="Dota 2">Dota 2</option>
-                <option value="CS:GO">CS:GO</option>
-                <option value="Ready or not">Ready or not</option>
-                <option value="Lethal company">Lethal company</option>
-            </select>
-
-            <label for="date">Дата:</label>
-            <input type="date" id="date" name="date" required>
-
-            <label for="time">Время:</label>
-            <input type="time" id="time" name="time" required>
-
-            <!-- Поле сообщения -->
-            <label for="message">Сообщение:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <!-- Скрытые поля для Formspree -->
-            <input type="hidden" name="_next" value="https://k1xmusic.github.io/dota-schedule//thanks.html" />
-            <input type="hidden" name="_subject" value="Плюс долбаёб" />
-
-            <button type="submit">Отправить</button>
-        </form>
+        <h1>Выберите игру</h1>
+        <div class="game-selection">
+            <a href="dota2.html" class="game-card">
+                <img src="images/dota2.jpg" alt="Dota 2">
+                <h2>Dota 2</h2>
+            </a>
+            <a href="readyornot.html" class="game-card">
+                <img src="images/readyornot.jpg" alt="Ready Or Not">
+                <h2>Ready Or Not</h2>
+            </a>
+            <a href="lethalcompany.html" class="game-card">
+                <img src="images/lethalcompany.jpg" alt="Lethal Company">
+                <h2>Lethal Company</h2>
+            </a>
+        </div>
     </div>
 </body>
 </html>
