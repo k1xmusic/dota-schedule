@@ -9,12 +9,9 @@ body {
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 90%;
-    max-width: 600px; /* Ограничиваем максимальную ширину */
+    max-width: 800px; /* Увеличиваем максимальную ширину */
     text-align: center; /* Центрирование текста внутри контейнера */
     position: relative;
     overflow: hidden; /* Скрытие переполнения для эффекта крови */
@@ -40,6 +37,28 @@ body {
 
 h1 {
     margin-bottom: 20px;
+    font-size: 2em; /* Увеличиваем размер шрифта заголовка */
+    text-shadow: 2px 2px 5px red, -2px -2px 5px red; /* Добавляем тени для 3D эффекта */
+    position: relative;
+    z-index: 1;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.4) 10%, transparent 10%);
+    transform: rotate(30deg);
+    animation: bloodFlowText 5s infinite linear;
+    z-index: -1;
+}
+
+@keyframes bloodFlowText {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
 }
 
 label {
@@ -75,8 +94,10 @@ button {
     text-decoration: none;
     color: white;
     flex: 1 1 calc(33.333% - 40px); /* Каждая карточка занимает треть ширины контейнера минус отступы */
-    max-width: 200px; /* Максимальная ширина карточки */
+    max-width: 300px; /* Максимальная ширина карточки */
     transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
 }
 
 .game-card img {
@@ -84,25 +105,47 @@ button {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
 }
 
-.game-card:hover {
+.game-card h2 {
+    font-size: 1.5em; /* Увеличиваем размер шрифта заголовков */
+    text-shadow: 2px 2px 5px red, -2px -2px 5px red; /* Добавляем тени для 3D эффекта */
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.game-card h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.4) 10%, transparent 10%);
+    transform: rotate(30deg);
+    animation: bloodFlowText 5s infinite linear;
+    z-index: -1;
+}
+
+.game-card:hover img {
     transform: scale(1.05);
 }
 
 /* Уникальные фоны для каждой игры */
 body.dota2 {
-    background: url('https://k1xmusic.github.io/dota-schedule//images/dota2-background.jpg') no-repeat center center fixed;
+    background: url('https://k1xmusic.github.io/dota-schedule/images/dota2-background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 body.readyornot {
-    background: url('https://k1xmusic.github.io/dota-schedule//images/readyornot-background.jpg') no-repeat center center fixed;
+    background: url('https://k1xmusic.github.io/dota-schedule/images/readyornot-background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 body.lethalcompany {
-    background: url('https://k1xmusic.github.io/dota-schedule//images/lethalcompany-background.jpg') no-repeat center center fixed;
+    background: url('https://k1xmusic.github.io/dota-schedule/images/lethalcompany-background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
