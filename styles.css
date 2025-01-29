@@ -12,7 +12,7 @@ body {
 .container {
     padding: 20px;
     width: 90%;
-    max-width: 500px; /* Ограничиваем максимальную ширину контейнера */
+    max-width: 500px; /* Увеличиваем максимальную ширину контейнера */
     text-align: center; /* Центрирование текста внутри контейнера */
     position: relative;
     overflow: hidden; /* Скрытие переполнения для эффекта крови */
