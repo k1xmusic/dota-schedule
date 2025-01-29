@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись на игры</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Запись на игры</h1>
+        <form action="send_email.php" method="post">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="surname">Фамилия:</label>
+            <input type="text" id="surname" name="surname" required>
+
+            <label for="game">Игра:</label>
+            <select id="game" name="game" required>
+                <option value="Dota 2">Dota 2</option>
+                <option value="CS:GO">CS:GO</option>
+                <option value="Overwatch">Overwatch</option>
+                <!-- Добавьте другие игры если нужно -->
+            </select>
+
+            <label for="date">Дата:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Время:</label>
+            <input type="time" id="time" name="time" required>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</body>
+</html>
