@@ -1,3 +1,4 @@
+/* Основные стили */
 body {
     font-family: Arial, sans-serif;
     color: white;
@@ -12,7 +13,7 @@ body {
 .container {
     padding: 20px;
     width: 90%;
-    max-width: 500px; /* Увеличиваем максимальную ширину контейнера */
+    max-width: 500px; /* Ограничиваем максимальную ширину контейнера */
     text-align: center; /* Центрирование текста внутри контейнера */
     position: relative;
     overflow: hidden; /* Скрытие переполнения для эффекта крови */
@@ -62,4 +63,69 @@ h1::before {
 
 @keyframes bloodFlowText {
     0% { background-position: 0 0; }
-    100% { background
+    100% { background-position: 100% 100%; }
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2b2b2b;
+    color: white;
+    resize: none; /* Запрет на растягивание текстового поля */
+}
+
+button {
+    background-color: #6a4c93;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Уникальные фоны для каждой игры */
+body.dota2 {
+    background: url('https://k1xmusic.github.io/dota-schedule/images/dota2-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.readyornot {
+    background: url('https://k1xmusic.github.io/dota-schedule/images/readyornot-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.lethalcompany {
+    background: url('https://k1xmusic.github.io/dota-schedule/images/lethalcompany-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        max-width: 100%; /* Полная ширина на мобильных устройствах */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Уменьшаем размер шрифта заголовка */
+    }
+
+    input, select, textarea, button {
+        padding: 8px; /* Уменьшаем внутренние отступы */
+        font-size: 1em; /* Уменьшаем размер шрифта */
+    }
+
+    textarea {
+        height: 80px; /* Фиксируем высоту текстового поля */
+    }
+
+    .container::before {
+        opacity: 0.5; /* Уменьшаем интенсивность эффекта крови */
+    }
+}
