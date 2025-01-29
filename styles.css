@@ -62,16 +62,20 @@ button {
 
 /* Уникальные фоны для каждой игры */
 body.dota2 {
-    background: url('images/dota2-background.jpg') no-repeat center center fixed;
+    background: url('https://k1xmusic.github.io/dota-schedule/images/dota2-background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 body.readyornot {
-    background: url('images/readyornot-background.jpg') no-repeat center center fixed;
+    background: url('https://k1xmusic.github.io/dota-schedule/images/readyornot-background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 body.lethalcompany {
-    background: url('images/lethalcompany-background.jpg') no-repeat center center fixed;
+    background: url('https://k1xmusic.github.io/dota-schedule/images/lethalcompany-background.jpg') no-repeat center center fixed;
     background-size: cover;
+}
+
+textarea {
+    resize: none; /* Запрет на растягивание текстового поля */
 }
