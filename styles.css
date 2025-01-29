@@ -59,7 +59,7 @@ button {
     border-radius: 10px;
 }
 
-/* Добавляем уникальные фоны для каждой игры */
+/* Уникальные фоны для каждой игры */
 body.dota2 {
     background: url('images/dota2-background.jpg') no-repeat center center fixed;
     background-size: cover;
