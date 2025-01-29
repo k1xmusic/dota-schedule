@@ -6,15 +6,19 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: transparent; /* Убираем фон тела */
 }
 
 .container {
     padding: 20px;
     width: 90%;
-    max-width: 800px; /* Увеличиваем максимальную ширину */
+    max-width: 500px; /* Увеличиваем максимальную ширину контейнера */
     text-align: center; /* Центрирование текста внутри контейнера */
     position: relative;
     overflow: hidden; /* Скрытие переполнения для эффекта крови */
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .container::before {
@@ -58,97 +62,4 @@ h1::before {
 
 @keyframes bloodFlowText {
     0% { background-position: 0 0; }
-    100% { background-position: 100% 100%; }
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-}
-
-input, select, textarea, button {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: none;
-    background-color: #2b2b2b;
-    color: white;
-}
-
-button {
-    background-color: #6a4c93;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-.game-selection {
-    display: flex;
-    gap: 20px;
-    justify-content: space-around; /* Центрирование блока с карточками игр */
-    flex-wrap: wrap; /* Позволяет карточкам переноситься на новую строку при необходимости */
-}
-
-.game-card {
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    flex: 1 1 calc(33.333% - 40px); /* Каждая карточка занимает треть ширины контейнера минус отступы */
-    max-width: 300px; /* Максимальная ширина карточки */
-    transition: transform 0.3s ease-in-out;
-    position: relative;
-    z-index: 1;
-}
-
-.game-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease-in-out;
-}
-
-.game-card h2 {
-    font-size: 1.5em; /* Увеличиваем размер шрифта заголовков */
-    text-shadow: 2px 2px 5px red, -2px -2px 5px red; /* Добавляем тени для 3D эффекта */
-    margin-top: 10px;
-    position: relative;
-    z-index: 1;
-}
-
-.game-card h2::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(255, 0, 0, 0.4) 10%, transparent 10%);
-    transform: rotate(30deg);
-    animation: bloodFlowText 5s infinite linear;
-    z-index: -1;
-}
-
-.game-card:hover img {
-    transform: scale(1.05);
-}
-
-/* Уникальные фоны для каждой игры */
-body.dota2 {
-    background: url('https://k1xmusic.github.io/dota-schedule/images/dota2-background.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-body.readyornot {
-    background: url('https://k1xmusic.github.io/dota-schedule/images/readyornot-background.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-body.lethalcompany {
-    background: url('https://k1xmusic.github.io/dota-schedule/images/lethalcompany-background.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-textarea {
-    resize: none; /* Запрет на растягивание текстового поля */
-}
+    100% { background
