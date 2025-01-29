@@ -10,11 +10,8 @@
     <div class="container">
         <h1>Запись на Lethal Company</h1>
         <form action="https://formspree.io/f/xkgorljr" method="POST">
-            <label for="name">Имя:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="surname">Фамилия:</label>
-            <input type="text" id="surname" name="surname" required>
+            <label for="steamname">Никнейм Steam:</label>
+            <input type="text" id="steamname" name="steamname" required>
 
             <label for="date">Дата:</label>
             <input type="date" id="date" name="date" required>
@@ -24,10 +21,10 @@
 
             <!-- Поле сообщения -->
             <label for="message">Сообщение:</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" rows="4" required></textarea>
 
             <!-- Скрытые поля для Formspree -->
-            <input type="hidden" name="_next" value="https://your-github-username.github.io/your-repo-name/thanks.html" />
+            <input type="hidden" name="_next" value="https://k1xmusic.github.io/dota-schedule/thanks.html" />
             <input type="hidden" name="_subject" value="Новая запись на Lethal Company" />
 
             <button type="submit">Отправить</button>
