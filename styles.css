@@ -1,6 +1,4 @@
 body {
-    background: url('images/dota2-background.jpg') no-repeat center center fixed;
-    background-size: cover;
     font-family: Arial, sans-serif;
     color: white;
     display: flex;
@@ -42,4 +40,37 @@ button {
     background-color: #6a4c93;
     cursor: pointer;
     margin-top: 20px;
+}
+
+.game-selection {
+    display: flex;
+    gap: 20px;
+}
+
+.game-card {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.game-card img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Добавляем уникальные фоны для каждой игры */
+body.dota2 {
+    background: url('images/dota2-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.readyornot {
+    background: url('images/readyornot-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.lethalcompany {
+    background: url('images/lethalcompany-background.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
