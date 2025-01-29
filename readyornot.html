@@ -10,11 +10,8 @@
     <div class="container">
         <h1>Запись на Ready Or Not</h1>
         <form action="https://formspree.io/f/xkgorljr" method="POST">
-            <label for="name">Имя:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="surname">Фамилия:</label>
-            <input type="text" id="surname" name="surname" required>
+            <label for="steamname">Никнейм Steam:</label>
+            <input type="text" id="steamname" name="steamname" required>
 
             <label for="date">Дата:</label>
             <input type="date" id="date" name="date" required>
@@ -24,7 +21,33 @@
 
             <!-- Поле сообщения -->
             <label for="message">Сообщение:</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <!-- Скрытые поля для Formspree -->
+            <input type="hidden" name="_next" value="<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись на Ready Or Not</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="readyornot">
+    <div class="container">
+        <h1>Запись на Ready Or Not</h1>
+        <form action="https://formspree.io/f/xkgorljr" method="POST">
+            <label for="steamname">Никнейм Steam:</label>
+            <input type="text" id="steamname" name="steamname" required>
+
+            <label for="date">Дата:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Время:</label>
+            <input type="time" id="time" name="time" required>
+
+            <!-- Поле сообщения -->
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
 
             <!-- Скрытые поля для Formspree -->
             <input type="hidden" name="_next" value="https://your-github-username.github.io/your-repo-name/thanks.html" />
@@ -34,4 +57,11 @@
         </form>
     </div>
 </body>
-</html>
+</html>thanks.html" />
+            <input type="hidden" name="_subject" value="Новая запись на Ready Or Not" />
+
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</body>
+</html>с
