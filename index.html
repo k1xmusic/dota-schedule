@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Запись на игры</h1>
-        <form action="send_email.php" method="post">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
             <label for="name">Имя:</label>
             <input type="text" id="name" name="name" required>
 
@@ -28,6 +28,10 @@
 
             <label for="time">Время:</label>
             <input type="time" id="time" name="time" required>
+
+            <!-- Добавляем скрытое поле для email -->
+            <input type="hidden" name="_next" value="https://your-github-username.github.io/your-repo-name/thanks.html" />
+            <input type="hidden" name="_subject" value="Новая запись на игру" />
 
             <button type="submit">Отправить</button>
         </form>
