@@ -6,19 +6,20 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: transparent; /* Убираем фон тела */
+    background-color: transparent;
+    transition: background-color 0.3s ease;
 }
 
 .container {
     padding: 20px;
     width: 90%;
-    max-width: 500px; /* Увеличиваем максимальную ширину контейнера */
-    text-align: center; /* Центрирование текста внутри контейнера */
+    max-width: 600px; /* Увеличили максимальную ширину для лучшего отображения */
+    text-align: center;
     position: relative;
-    overflow: hidden; /* Скрытие переполнения для эффекта крови */
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8); /* Увеличили прозрачность фона */
+    border-radius: 15px; /* Углы теперь более округлые */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
 }
 
 .container::before {
@@ -41,10 +42,12 @@ body {
 
 h1 {
     margin-bottom: 20px;
-    font-size: 2em; /* Увеличиваем размер шрифта заголовка */
-    text-shadow: 2px 2px 5px red, -2px -2px 5px red; /* Добавляем тени для 3D эффекта */
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 3px 3px 10px red, -3px -3px 10px red;
     position: relative;
     z-index: 1;
+    color: #f0f0f0;
 }
 
 h1::before {
@@ -65,30 +68,70 @@ h1::before {
     100% { background-position: 100% 100%; }
 }
 
-label {
+.game-selection {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.game-card {
     display: block;
+    width: 180px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+}
+
+.game-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.game-card h2 {
     margin-top: 10px;
-    text-align: left; /* Выравнивание текста по левому краю */
+    font-size: 1.2em;
 }
 
 input, select, textarea, button {
     width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 12px;
+    margin-top: 15px;
     border-radius: 5px;
     border: none;
     background-color: #2b2b2b;
     color: white;
-    resize: none; /* Запрет на растягивание текстового поля */
+    resize: none;
+    font-size: 1em;
 }
 
 button {
     background-color: #6a4c93;
     cursor: pointer;
     margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
-/* Уникальные фоны для каждой игры */
+button:hover {
+    background-color: #5b3d7c;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
 body.dota2 {
     background: url('https://k1xmusic.github.io/dota-schedule/images/dota2-background.jpg') no-repeat center center fixed;
     background-size: cover;
