@@ -9,9 +9,9 @@
 <body class="dota2">
     <div class="container">
         <h1>Запись на Dota 2</h1>
-        <form action="https://formspree.io/f/xkgorljr" method="POST" novalidate>
+        <form action="https://formspree.io/f/xkgorljr" method="POST">
             <label for="steamname">Никнейм Steam:</label>
-            <input type="text" id="steamname" name="steamname" required autocomplete="off">
+            <input type="text" id="steamname" name="steamname" required>
 
             <label for="date">Дата:</label>
             <input type="date" id="date" name="date" required>
@@ -22,7 +22,6 @@
             <label for="message">Сообщение:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
-            <!-- Скрытые поля для Formspree -->
             <input type="hidden" name="_next" value="https://k1xmusic.github.io/dota-schedule/thanks.html">
             <input type="hidden" name="_subject" value="Новая запись на Dota 2">
 
