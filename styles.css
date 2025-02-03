@@ -38,10 +38,10 @@ h1 {
 button {
     background-color: #6a4c93;
     color: white;
-    padding: 8px 16px;  /* Уменьшение padding для компактности */
-    font-size: 0.9rem;   /* Уменьшение размера шрифта */
+    padding: 8px 16px;
+    font-size: 0.9rem;
     border: none;
-    border-radius: 6px;  /* Снижение радиуса скругления */
+    border-radius: 6px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
     width: 100%;
@@ -68,14 +68,18 @@ input, select, textarea {
     font-size: 1em;
 }
 
-/* Для лучшего отображения игры на фоне */
+/* Уникальные фоны для каждой игры */
 body.dota2 {
     background: url('https://k1xmusic.github.io/dota-schedule/images/dota2-background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
-/* Добавляем стили при наведении на элементы формы */
-input:focus, select:focus, textarea:focus, button:focus {
-    outline: none;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+body.readyornot {
+    background: url('https://k1xmusic.github.io/dota-schedule/images/readyornot-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.lethalcompany {
+    background: url('https://k1xmusic.github.io/dota-schedule/images/lethalcompany-background.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
