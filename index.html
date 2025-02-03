@@ -3,36 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Запись на Dota 2</title>
+    <title>Выбор игры</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="dota2">
+<body>
     <div class="container">
-        <h1>Запись на Dota 2</h1>
-        <form action="https://formspree.io/f/xkgorljr" method="POST" novalidate>
-            <!-- Поле для никнейма Steam -->
-            <label for="steamname">Никнейм Steam:</label>
-            <input type="text" id="steamname" name="steamname" required autocomplete="off">
-
-            <!-- Поле для даты -->
-            <label for="date">Дата:</label>
-            <input type="date" id="date" name="date" required>
-
-            <!-- Поле для времени -->
-            <label for="time">Время:</label>
-            <input type="time" id="time" name="time" required>
-
-            <!-- Поле для сообщения -->
-            <label for="message">Сообщение:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <!-- Скрытые поля для Formspree -->
-            <input type="hidden" name="_next" value="https://k1xmusic.github.io/dota-schedule/thanks.html">
-            <input type="hidden" name="_subject" value="Новая запись на Dota 2">
-
-            <!-- Кнопка отправки -->
-            <button type="submit">Отправить</button>
-        </form>
+        <h1>Выберите игру для записи</h1>
+        <div class="game-selection">
+            <a href="dota2.html" class="game-card">
+                <img src="images/dota2.jpg" alt="Dota 2">
+                <h2>Dota 2</h2>
+            </a>
+            <a href="readyornot.html" class="game-card">
+                <img src="images/readyornot.jpg" alt="Ready Or Not">
+                <h2>Ready Or Not</h2>
+            </a>
+            <a href="lethalcompany.html" class="game-card">
+                <img src="images/lethalcompany.jpg" alt="Lethal Company">
+                <h2>Lethal Company</h2>
+            </a>
+        </div>
     </div>
 </body>
 </html>
